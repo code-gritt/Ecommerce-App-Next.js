@@ -6,6 +6,8 @@
  * and re-run `payload generate:types` to regenerate this file.
  */
 
+import { ReactNode } from "react"
+
 export type CartItems =
   | {
       product?: (string | null) | Product
@@ -493,10 +495,12 @@ export interface Header {
   createdAt?: string | null
 }
 export interface Footer {
+  copyright: ReactNode
   id: string
   navItems?:
     | {
         link: {
+          icon: Media
           type?: ('reference' | 'custom') | null
           newTab?: boolean | null
           reference?: {
